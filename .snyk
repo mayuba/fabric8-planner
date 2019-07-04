@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - angular2-tree-component > lodash:
+        patched: '2019-07-04T08:45:26.170Z'
+    - ngx-widgets > angular2-tree-component > lodash:
+        patched: '2019-07-04T08:45:26.170Z'
