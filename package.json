@@ -40,7 +40,9 @@
     "validate-webpack:prod": "webpack-validator webpack.config.js --env.prod",
     "webdriver-start": "./node_modules/protractor/bin/webdriver-manager update && ./node_modules/protractor/bin/webdriver-manager start",
     "watch:test": "npm run test:unit -- --auto-watch --no-single-run",
-    "watch:library": "gulp watch"
+    "watch:library": "gulp watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "license": "Apache-2.0",
   "contributors": [
@@ -125,7 +127,8 @@
     "ngx-widgets": "0.14.0",
     "reflect-metadata": "0.1.10",
     "rxjs": "5.2.0",
-    "zone.js": "0.8.5"
+    "zone.js": "0.8.5",
+    "snyk": "^1.190.0"
   },
   "peerDependencies": {},
   "devDependencies": {
@@ -228,5 +231,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "snyk": true
 }
